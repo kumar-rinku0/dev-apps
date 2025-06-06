@@ -20,12 +20,13 @@ export default function NewPost() {
       data: {
         name,
         email,
-        password,
+        password: hashedPassword,
       },
     });
-
-    revalidatePath("/");
-    redirect("/");
+    if (user) {
+      revalidatePath("/login");
+      redirect("/login");
+    }
   }
 
   return (
