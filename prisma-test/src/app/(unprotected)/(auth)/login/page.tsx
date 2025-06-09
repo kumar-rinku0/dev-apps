@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import prisma from "@/lib/prisma";
-import { saltAndHashPassword, verifyPassword } from "@/utils/hash-password";
+import { verifyPassword } from "@/utils/hash-password";
 import { revalidatePath } from "next/cache";
 import Form from "next/form";
 import { redirect } from "next/navigation";
